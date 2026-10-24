@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #111318;
+    color: #f3f4f6;
+    font-family: "Segoe UI", Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: min(100%, 960px);
+    margin-inline: auto;
+    padding: 36px;
+    border: 1px solid #30343d;
+    border-radius: 20px;
+    background: #1b1e25;
+    box-shadow: 0 16px 48px rgb(0 0 0 / 35%);
+    box-sizing: border-box;
+}
+
+.container h1 {
+    margin: 0 0 28px;
+    font-size: clamp(1.7rem, 4vw, 2.35rem);
+    letter-spacing: -0.04em;
+    text-align: center;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 100%;
+}
+
+.controls select {
+    min-height: 44px;
+    padding: 0 38px 0 14px;
+    border: 1px solid #3a3f4a;
+    border-radius: 12px;
+    background: #252932;
+    color: #e1e4eb;
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+body button {
+    min-height: 44px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 10px;
+    background: #5b5ce2;
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+body button:hover {
+    transform: translateY(-1px);
+    background: #494acb;
+    box-shadow: 0 6px 16px rgb(73 74 203 / 24%);
+}
+
+body button:focus-visible {
+    outline: 3px solid rgb(91 92 226 / 35%);
+    outline-offset: 3px;
+}
+
+#generateBtn {
+    min-width: 130px;
+}
+
+.palette {
+    display: grid;
+    width: 100%;
+    flex-basis: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.color-card {
+    overflow: hidden;
+    border: 1px solid #3a3f4a;
+    border-radius: 12px;
+    background: #252932;
+}
+
+.color-swatch {
+    min-height: 130px;
+}
+
+.color-code {
+    display: block;
+    padding: 12px 8px;
+    color: #e1e4eb;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+@media (max-width: 540px) {
+    body {
+        padding: 24px 14px;
+    }
+
+    .container {
+        padding: 26px 18px;
+    }
+
+    .controls {
+        align-items: center;
+    }
+
+    .controls select,
+    #generateBtn {
+        width: auto;
+    }
+}
